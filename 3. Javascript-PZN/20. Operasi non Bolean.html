@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Operator Non Bolean</title>
+  </head>
+  <body>
+    <script>
+      //--------------------- Operator Logika Non Bolean------------------------//
+
+      // 1. Operator OR || di Non Bolean
+
+      console.info("Hello" || "");
+      console.info("" || []);
+      console.info("0" || "Nol"); //Kalau dua2nya truty maka di ambil awalny
+      console.info("Nol" || "0"); //Kalau dua2nya truty maka di ambil awalnya
+      console.info(0 || "0");
+      console.info(null || "NULL");
+      console.info(null || "UNDEFINED");
+      console.info(null || undefined); //Kalau dua2nya falsy, maka di ambil yang akhir
+      console.info(0 || false); //Kalau dua2nya falsy, maka di ambil yang akhir
+
+      const person = {
+        firstName: "",
+        lastName: "Furqon",
+      };
+
+      const name = person.firstName || person.lastName;
+
+      console.info(name);
+
+      // 1. Operator AND && di Non Bolean
+      // mengambil dari kiri ke kanan
+      // akan mengambil nilai pertama yang falsy
+
+      console.info("Hello" && "");
+      console.info("" && []);
+      console.info("" && "");
+      console.info("0" && "NOL");
+      console.info(0 && "NOL");
+      console.info(null && "NULL");
+      console.info(undefined && "UNDEFINED");
+      console.info("NULL" && "UNDEFINED");
+    </script>
+  </body>
+</html>

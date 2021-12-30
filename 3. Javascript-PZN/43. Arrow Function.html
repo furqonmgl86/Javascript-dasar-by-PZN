@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arrow Function</title>
+  </head>
+  <body>
+    <script>
+      //--------------------- Arrow Function------------------------//
+
+      //Dinamakan arrrow function karena => kayak panah ya
+
+      //Mirip anonymous function
+
+      //1. Arrow function sederhana
+      /*
+      const sayHello = (nama) => {
+        const say = `Hello ${nama}`;
+        console.info(say);
+      };
+
+      sayHello("Furqon");*/
+
+      //2. Arrow function tanpa block
+      const sayHello = (nama) => console.info(`Hello ${nama}`);
+
+      sayHello("Fitri");
+
+      //3. Arrow function return value
+      const sum = (first, second) => {
+        return first + second;
+      };
+
+      console.info(sum(100, 100));
+
+      // yang tanpa return
+
+      const sumKan = (first, second) => first + second;
+
+      console.info(sumKan(10, 10));
+
+      // yang tanpa tanda kurung parameter
+      const saySayang = (namaBebeb) => console.info(`Hello ${namaBebeb}`);
+
+      saySayang("Fitri Fauziah");
+
+      //Arrow function sebagai parameter
+      //Kayak anonymous function
+
+      function giveMeName(callback) {
+        callback("Eko");
+      }
+
+      giveMeName((name) => console.info(`Hello ${name}`));
+    </script>
+  </body>
+</html>

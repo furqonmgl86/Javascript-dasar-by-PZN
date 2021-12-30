@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Function Rest Parameter</title>
+  </head>
+  <body>
+    <script>
+      //--------------------- Function Rest Parameter------------------------//
+
+      function sum(name, ...data) {
+        let total = 0;
+        for (const item of data) {
+          total += item;
+        }
+        document.writeln(`<h1>Berarti ${name} totalnya adalah ${total}`);
+      }
+
+      sum("Orange", 10, 20, 30, 40, 100, 50);
+      sum("Apple", 10, 20, 30, 40, 300, 50);
+      sum("Banana", 10, 20, 30, 40, 600, 50);
+
+      //Kalau kita terlanjur punya Array gimana, contohnya
+      const valueTes = [10, 10, 10, 10, 10, 10]; //harusnya totalnya 60kan
+      sum("Test Aja Kok ", valueTes); // Maka hasinya akan jadi aneh
+
+      //Untung ada spread syntax yang mengirim data array ke rest parameter, kita bisa gunakan ...(titik 3 kali)
+      //Jadi seperti ini
+      const spreadSyntax = [10, 10, 10, 10, 10, 10];
+      sum("Test pakai spreadsyntax ", ...spreadSyntax); //tambahkan 3 titik
+    </script>
+  </body>
+</html>

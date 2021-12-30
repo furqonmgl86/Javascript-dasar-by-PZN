@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>For of</title>
+  </head>
+  <body>
+    <script>
+      //--------------------- For Of------------------------//
+
+      //Mendapatkan valuenya, bukan indexnya
+
+      const names = ["Fitri", "Furqon", "Fauziah"];
+      for (const name of names) {
+        document.writeln(`<h1>${name}</h1>`);
+      }
+
+      //Mendapatkan iterasi / Itterable datanya
+      const fullName = "Annisa Nabila Hakim";
+      for (const characters of fullName) {
+        document.writeln(`<h1>${characters}</h1>`);
+      }
+
+      // Kalau objek bukan iterable, maka hasilnya tidak bisa
+      const person = {
+        firstName: "Eko",
+        lastName: "Wibowo",
+      };
+
+      for (const nameMu of person) {
+        document.writeln(`<h1>${nameMu}</h1>`);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Getter & Setter</title>
+  </head>
+  <body>
+    <script>
+      //--------------------- Getter & Setter------------------------//
+
+      // 1. Kode Getter
+
+      const person = {
+        firstName: "Muhammad",
+        lastName: "Furqon",
+        get fullName() {
+          return `${this.firstName} ${this.lastName}`;
+        },
+      };
+
+      //Otomatis memanggil get fullName()
+      console.info(person.fullName);
+
+      //2. Kode Setter
+      const biodata = {
+        firstName: "Muhammad",
+        lastName: "Furqon",
+        get fullName() {
+          return `${this.firstName} ${this.lastName}`;
+        },
+        set fullName(value) {
+          const arrayh = value.split(" ");
+          this.firstName = arrayh[0];
+          this.lastName = arrayh[1];
+        },
+      };
+
+      biodata.fullName = "Fitri Fauziah";
+      console.table(biodata);
+
+      biodata.fullName = "Nabilla Hakim";
+      console.table(biodata);
+
+      biodata.fullName = "Nada Fatihatuz";
+      console.table(biodata);
+    </script>
+  </body>
+</html>

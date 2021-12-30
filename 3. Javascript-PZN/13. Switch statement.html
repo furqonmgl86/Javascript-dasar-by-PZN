@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Switch</title>
+  </head>
+  <body>
+    <script>
+      //--------------------- Switch Percabangan ------------------------//
+      const nilai = prompt("Masukan nilai anda");
+
+      switch (nilai) {
+        case "A":
+          document.writeln("<p>Anda Mumtaz</p>");
+          break;
+        case "B":
+        case "C":
+          document.writeln("<p>Anda Jayyid Jiddan</p>");
+          break;
+        case "D":
+          document.writeln("<p>Anda tidak lulus</p>");
+          break;
+        default:
+          document.writeln("<p>Anda salah jurusan</p>");
+      }
+
+      //Kalau menggunakan if
+
+      const result = prompt("Masukan result anda");
+      {
+        if (result === "A") {
+          document.writeln("<p>Anda Mantap</p>");
+        } else if (result === "B" || result === "C") {
+          document.writeln("<p>Anda Joss</p>");
+        } else if (result === "D") {
+          document.writeln("<p>Anda TOLOL</p>");
+        } else {
+          document.writeln("<p>Anda salah kamar</p>");
+        }
+      }
+    </script>
+  </body>
+</html>

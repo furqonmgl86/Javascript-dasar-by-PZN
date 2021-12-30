@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tipe Data Array</title>
+  </head>
+  <body>
+    <script>
+      //---------------------Array ------------------------//
+      //Setiap data akan di mulai dengan urutan 0 bukan 1 ya
+      // Index Array
+      // Panjang Array
+
+      let arrayKosong = []; //Array Kosong
+
+      let array = ["Muhammad", "Furqon", "Fitri", 1, true]; //Array Berisi
+
+      //Cara menambah data Array
+      const name = [];
+
+      name.push("Muhammad"); //Push untuk menambahkan data array
+      name.push("Furqon", "Fitri", "Nabila");
+      name.push("Jumzud", true, 3, "Icha");
+
+      console.table(name);
+
+      console.info(name[0]);
+      console.info(name[2]);
+      console.info(name[3]);
+
+      name[3] = "Fauziah"; // Untuk mengganti data di array
+      name[4] = "Cianjue";
+      console.table(name);
+
+      delete name[4]; //Menghapus data dan posisi dia sebelumnya jadi kosong
+      console.table(name);
+
+      name.push("Malaysia");
+      console.table(name);
+
+      name[4] = "Padang";
+      console.table(name);
+
+      // Memasukan array di dalam array
+
+      name.push(["Jakarta", "Bogor", "Sidoarjo"]);
+      console.table(name);
+    </script>
+  </body>
+</html>

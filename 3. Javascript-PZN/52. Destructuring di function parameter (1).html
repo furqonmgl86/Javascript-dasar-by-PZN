@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Destructuring di function parameter</title>
+  </head>
+  <body>
+    <script>
+      //--------------------- Destructuring di function parameter ------------------------//
+
+      //Destructuring di function parameter (1)
+      // 1. Kode tanpa Destructuring
+      function displayPerson(person) {
+        console.info(person.firstName);
+        console.info(person.middleName);
+        console.info(person.lastName);
+      }
+
+      const person = {
+        firstName: "Alfriali",
+        middleName: "jumzud",
+        lastName: "Fungki",
+      };
+
+      displayPerson(person);
+
+      // 2. Kode Destructuring
+      function displayOrang({ namaAwal, namaTengah, namaAkhir }) {
+        console.info(orang.namaAwal);
+        console.info(orang.namaTengah);
+        console.info(orang.namaAkhir);
+      }
+
+      const orang = {
+        namaAwal: "Afrizal",
+        namaTengah: "Incek",
+        namaAkhir: "Biji",
+      };
+
+      displayOrang(orang);
+
+      //Destructuring di function parameter (2)
+
+      // Tanpa destructuring
+      function sum(array) {
+        return array[0] + array[1];
+      }
+
+      console.info(sum([1, 1]));
+      console.info(sum([10, 10]));
+
+      //Dengan destructuring
+      function jumlah([pertama, kedua]) {
+        return pertama + kedua;
+      }
+
+      console.info(jumlah([2, 2]));
+      console.info(jumlah([20, 20]));
+
+      //Default Value Parameter didalam destructuring Array
+
+      {
+        const names = ["Siti", "Fitri", "Fauziah"];
+        const [firstName, middleName = "Muhammad", lastName = "Furqon"] = names;
+
+        console.info(firstName);
+        console.info(middleName);
+        console.info(lastName);
+      }
+
+      //Default Value Parameter didalam destructuring Object
+      {
+        const biodataSantri = {
+          ismi: "Latif",
+          qism: "Keamanan",
+          fasel: "6E",
+        };
+
+        const { ismi, qism, fasel = "5D" } = biodataSantri;
+        console.info(ismi);
+        console.info(qism);
+        console.info(fasel);
+      }
+
+      //Destructuring menggunakan nama variable lain
+
+      console.info("Destructuring menggunakan nama variable lain");
+      {
+        const person = {
+          firstName: "Arifin",
+          middleName: "Badri",
+          lastName: "Kurniadi",
+        };
+
+        let { firstName: namaDepan, middleName: namaTengah = "Kurniawan", lastName: namaBelakang } = person;
+
+        console.info(namaDepan);
+        console.info(namaTengah);
+        console.info(namaBelakang);
+      }
+    </script>
+  </body>
+</html>

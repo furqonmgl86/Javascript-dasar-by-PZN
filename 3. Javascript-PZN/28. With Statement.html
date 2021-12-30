@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>With Statement</title>
+  </head>
+  <body>
+    <script>
+      //--------------------- With Statement------------------------//
+
+      //Menurunkan scope data
+
+      //1. Kode tanpa with statement
+
+      /*
+      const biodata = {
+        namaLengkap: "Muhammad Furqon",
+        tempatLahir: "Magelang",
+        pacar: "Fitri",
+      };
+
+      console.log(biodata.namaLengkap);
+      console.log(biodata.tempatLahir);
+      console.log(biodata.pacar);
+      */
+
+      //2. Kalau pakai with
+      const biodata = {
+        namaLengkap: "Muhammad Furqon",
+        tempatLahir: "Magelang",
+        pacar: "Fitri",
+      };
+
+      with (biodata) {
+        console.log(namaLengkap);
+        console.log(tempatLahir);
+        console.log(pacar);
+      }
+
+      //with tidak direkomendasikan
+      //bahkan sudah tidak boleh kalau sudah belajar stricth
+      // Kadang kodenya menjadi ambigu
+
+      // 3. Ambigunya with statement
+      const haqoiq = {
+        ismKamil: "Muhammad Furqon",
+        daerah: "Magelang",
+        habibah: "Fitri",
+      };
+
+      const ismKamil = "Fajar";
+      const daerah = "Padang";
+
+      with (haqoiq) {
+        console.log(habibah);
+        console.log(ismKamil); //Niatnya mau  fajar
+        console.log(daerah); //Niatnya mau Padang
+      }
+    </script>
+  </body>
+</html>

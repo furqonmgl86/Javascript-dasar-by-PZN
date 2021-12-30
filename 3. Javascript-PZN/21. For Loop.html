@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>For Loop</title>
+  </head>
+  <body>
+    <script>
+      //--------------------- For Loop------------------------//
+      //Pengulangan yang gak pernah berhenti
+
+      /*  for (;;) {
+        alert("For Loop");
+      }*/
+
+      //Cara Pertama
+      let counter = 1;
+      for (; counter <= 10; ) {
+        document.writeln(`<p>Perulangan ${counter}</p>`);
+        counter++;
+      }
+      document.writeln(`<br> <br>`);
+
+      //Cara Kedua
+
+      for (counter = 1; counter <= 10; ) {
+        document.writeln(`<p>Perulangan Pertama ${counter}</p>`);
+        counter++;
+      }
+      document.writeln(`<br> <br>`);
+
+      //Cara ketiga
+      for (counter = 1; counter <= 10; counter++) {
+        document.writeln(`<p>Perulangan Kedua ${counter}</p>`);
+      }
+    </script>
+  </body>
+</html>

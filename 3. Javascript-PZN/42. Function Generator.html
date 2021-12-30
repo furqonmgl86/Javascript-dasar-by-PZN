@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Function Generator</title>
+  </head>
+  <body>
+    <script>
+      //--------------------- Function Generator------------------------//
+
+      //Data generator hanya bisa di iterasi, bukan berupa index
+
+      //Function Generator kode yang sederhana
+      function* createName() {
+        yield "Eko";
+        yield "Kurniawan";
+        yield "Kannedy";
+      }
+
+      //console.info(createName());
+
+      const names = createName();
+      for (const name of names) {
+        console.info(name);
+      }
+
+      ///Function Generator kode yang kompleks
+      function* buatGanjil(value) {
+        for (let i = 1; i <= value; i++) {
+          if (i % 2 === 1) {
+            console.info(`yield ${i}`);
+            yield i;
+          }
+        }
+      }
+
+      const numbers = buatGanjil(100);
+
+      for (const numberGanjil of numbers) {
+        console.info(numberGanjil);
+      }
+
+      //Generator sifatnya lazy
+    </script>
+  </body>
+</html>

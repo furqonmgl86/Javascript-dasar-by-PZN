@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scope</title>
+  </head>
+  <body>
+    <script>
+      //--------------------- Scope ------------------------//
+
+      //Global Scope
+      let counter = 0;
+      function hitMe() {
+        // Local scope function hitsme
+        counter++; //we can access
+      }
+
+      hitMe();
+      hitMe();
+
+      console.info(counter);
+
+      // Local Scope
+
+      function first() {
+        //local scope first
+        let firstVariable = "First";
+        console.info(firstVariable); // Kalau didalam scope baru bisa diakses
+      }
+
+      function second() {
+        //local scope second
+        let secondVariable = "Second";
+        console.info(secondVariable); // Kalau didalam scope baru bisa diakses
+      }
+
+      first();
+      second();
+
+      //console.info(firstVariable); //Gak bisa di akses karena di luar
+      //console.info(secondVariable); //Gak bisa di akses karena di luar
+
+      //NESTED FUNCTION SCOPE
+    </script>
+  </body>
+</html>

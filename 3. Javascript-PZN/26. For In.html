@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>For In</title>
+  </head>
+  <body>
+    <script>
+      //--------------------- For In------------------------//
+      // Mengamabil data properti dalam objek dan index didalam array
+      //Cek Properti
+
+      //Akses properti for in yang di objek
+
+      const profil = {
+        firstName: "Muhammad",
+        middleName: "Furqon",
+        lastName: "Herizal",
+      };
+
+      for (const biodata in profil) {
+        document.writeln(`<p>${biodata} adalah ${profil[biodata]}</p>`);
+      }
+
+      //Yang di Array
+      const nama = ["Annisa", "Hanifari", "Marsucempi"];
+
+      for (const index in nama) {
+        document.writeln(`</p>${index} : ${nama[index]}</p>`);
+      }
+    </script>
+  </body>
+</html>

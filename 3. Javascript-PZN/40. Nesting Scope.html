@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nested Function Scope</title>
+  </head>
+  <body>
+    <script>
+      //--------------------- NESTED FUNCTION SCOPE------------------------//
+
+      function first() {
+        //local scope first
+        let firstVariable = "First";
+
+        //NESTED FUNCTION
+        function firstNested() {
+          console.info(firstVariable);
+          const firstNestedVariable = "First Nested";
+        }
+
+        firstNested();
+        console.info(firstNestedVariable);
+      }
+
+      function second() {
+        //local scope second
+        let secondVariable = "Second";
+      }
+
+      first();
+      second();
+    </script>
+  </body>
+</html>

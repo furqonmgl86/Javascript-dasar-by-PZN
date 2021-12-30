@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>In Operator</title>
+  </head>
+  <body>
+    <script>
+      //--------------------- In Operator ------------------------//
+
+      //Apakah ada properti tersebut dalam object
+      //Mengecek index di Array
+
+      const biodata = {
+        namaLengkap: "Muhammad Furqon",
+        tempatLahir: "Magelang",
+      };
+
+      if ("namaLengkap" in biodata) {
+        alert(`Hello ${biodata.namaLengkap}`);
+      } else {
+        alert("Hallo Aja");
+      }
+
+      //Dia cuma ngecek properti aja ya,,, bukan valunya
+      const student = {
+        nama: "Fitri Fauziah",
+        stambuk: undefined,
+      };
+
+      if ("stambuk" in student) {
+        alert(`Hello ${student.stambuk}`);
+      } else {
+        alert("Sayang");
+      }
+
+      //In operator di Array
+      const santri = [null, "Jumzud", null];
+      const hasil = 0 in santri;
+
+      document.writeln(`<h1>${hasil}</h1>`);
+    </script>
+  </body>
+</html>

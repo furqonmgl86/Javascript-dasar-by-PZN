@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pop Up</title>
+  </head>
+  <body>
+    <script>
+      //--------------------- Pop Up ------------------------//
+      //Alert
+      /* alert("Hallo, Apa Kabar"); */
+
+      // Prompt
+      /* const name = prompt("Siapakah Nama Anda?");
+
+      document.writeln(`<p>Selamat Datang ${name}</P>`);  */
+
+      //Confirm
+
+      const popUpConfirm = confirm("Anda Yakin Mau Masuk");
+
+      if (popUpConfirm) {
+        const nama = prompt("Siapakah Nama Anda?");
+        alert(`Selamat Datang ${nama}`);
+      } else {
+        alert("Okelah kalau begitu");
+      }
+    </script>
+  </body>
+</html>

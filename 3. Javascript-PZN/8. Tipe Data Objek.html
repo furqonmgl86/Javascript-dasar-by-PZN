@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tipe Data Object</title>
+  </head>
+  <body>
+    <script>
+      //--------------------- Object ------------------------//
+
+      const namaNama = {}; //Kalau yang kosong
+
+      //Ubah Properti atau Attribut
+
+      namaNama["nama"] = "Muhammad Furqon";
+      namaNama["alamat"] = "Padang";
+      namaNama["umur"] = 30;
+
+      console.table(namaNama);
+
+      delete namaNama["umur"]; //Untuk menghapus
+      console.table(namaNama);
+
+      //Kalau yang berisi
+
+      const biodata = {
+        "Nama Lengkap": "Muhammad Furqon",
+        alamatAja: "Indonesia",
+        umurAja: 30,
+      };
+
+      console.table(biodata);
+
+      //Cara mengakses data Array
+      console.info(`Nama Paling Lengkap : ${biodata["Nama Lengkap"]}`); //Cara Pertama dan kalau lebih satu kata
+      console.info(`Alamat : ${biodata.alamatAja}`); //Cara Kedua
+      console.info(`Umurnya : ${biodata.umurAja}`); //Cara Kedua
+    </script>
+  </body>
+</html>

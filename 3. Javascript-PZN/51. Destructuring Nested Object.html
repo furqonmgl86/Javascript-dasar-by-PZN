@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Destructuring Nested Object</title>
+  </head>
+  <body>
+    <script>
+      //--------------------- Destructuring Nested Object ------------------------//
+
+      const biodataSantri = {
+        ismi: "Latif",
+        qism: "Keamanan",
+        hujroh: {
+          maskan: "Santiniketan",
+          ayyuHujroh: "Sabiah",
+          roisHujroh: "Mehdar",
+        },
+        hobbi: "Ngevlog",
+        channel: "WPU Unpas",
+      };
+
+      const {
+        ismi,
+        qism,
+        hujroh: { maskan, ayyuHujroh, roisHujroh },
+        ...others
+      } = biodataSantri;
+      console.info(ismi);
+      console.info(qism);
+      console.info(maskan);
+      console.info(ayyuHujroh);
+      console.info(roisHujroh);
+    </script>
+  </body>
+</html>

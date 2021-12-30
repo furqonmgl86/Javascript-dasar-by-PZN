@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Optional Chaining</title>
+  </head>
+  <body>
+    <script>
+      //--------------------- Optional Chaining ------------------------//
+      // Kalau pakai if
+
+      /* const person = {};
+
+      let country;
+
+      if (person.adress != undefined && person.adress != null) {
+        country = person.adress.country;
+      }
+      document.writeln("Joss");
+
+      document.writeln(`<p>${country}</p>`);
+      document.writeln("Joss"); */
+
+      // Kalau pakai optional chaining
+
+      const person = {
+        adress: {
+          country: "Jepang",
+        },
+      };
+
+      let country = person?.adress?.country;
+
+      document.writeln("Joss");
+
+      document.writeln(`<p>${country}</p>`);
+      document.writeln("Joss");
+    </script>
+  </body>
+</html>

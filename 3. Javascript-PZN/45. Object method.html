@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Object Nethod</title>
+  </head>
+  <body>
+    <script>
+      //--------------------- Object Nethod------------------------//
+
+      //Contoh Pertama
+      const orang = {
+        nama: "Sabarudin",
+        sayHello: function (name) {
+          alert(`Selamat Datang ${name}`); //Function ke dalam property
+        },
+      };
+
+      orang.sayHello("Nabila");
+
+      //Contoh Kedua
+
+      function saySayang(sayang) {
+        alert(`Sayang ${sayang}`);
+      }
+      const tersayang = {
+        nama: "Jumzud",
+        sayBebeb: saySayang, //Function kedalam value
+      };
+
+      tersayang.sayBebeb("Fitri Fauziah");
+
+      // Menambah method ke dalam objek
+
+      const biodata = {
+        ismi: "Sarrah",
+      };
+
+      biodata.sayMantan = function (ismi) {
+        alert(`Selamat Jalan ${ismi}`);
+      };
+      biodata.sayMantan("Sarrah Moy");
+    </script>
+  </body>
+</html>

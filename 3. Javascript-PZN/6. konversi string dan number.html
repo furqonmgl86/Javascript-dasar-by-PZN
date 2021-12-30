@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Konversi String dan Number</title>
+  </head>
+  <body>
+    <script>
+      //------------------Konversi dari string ke number --------------------//
+      // Sebelum di konversi
+      const value1 = "1";
+      const value2 = 1;
+      const sum = value1 + value2;
+
+      document.writeln(`<p>${sum}</P>`);
+      document.writeln("<br>");
+
+      // Sesudah di konversi
+
+      const valueAja = parseInt("1");
+      const valueAja2 = 1;
+      const total = valueAja + valueAja2;
+      document.writeln(`<p>${total}</P>`);
+      document.writeln("<br>");
+
+      //contoh masing2
+      document.writeln(`<p>${parseInt("2.9")}</p>`); //ParseInt
+      document.writeln(`<p>${parseFloat("1.9")}</p>`); //ParseFloat
+      document.writeln(`<p>${Number("1.1")}</p>`); //Number
+      document.writeln("<br>");
+
+      //------------------Konversi dari Number ke String--------------------//
+
+      const a = 1;
+      const b = 1;
+      const jumlah = a.toString() + b.toString();
+
+      document.writeln(`<p>${jumlah}</p>`);
+      document.writeln("<br>");
+
+      //------------------(NaN) Not A Number--------------------//
+
+      document.writeln(`<p>${parseInt("eko")}</p>`);
+      document.writeln(`<p>${parseInt("32eko")}</p>`);
+      document.writeln(`<p>${parseFloat("sabar 1.9 Majin")}</p>`);
+      document.writeln(`<p>${parseFloat("1.9 Majin")}</p>`);
+
+      document.writeln(`<p>${Number("1.1 Salah")}</p>`);
+      document.writeln(`<p>${Number("Salah")}</p>`);
+
+      document.writeln("<br>");
+
+      //Contoh Operasi Nan
+
+      const nomorSalah = Number("salah");
+      const angka = 1000;
+      const totalAngka = nomorSalah + angka;
+
+      document.writeln(`<p>${totalAngka}</p>`);
+      document.writeln("<br>");
+
+      //------------------Isnan Number--------------------//
+
+      document.writeln(`<p>${isNaN(nomorSalah)}</p>`);
+      document.writeln(`<p>${isNaN(angka)}</p>`);
+      document.writeln(`<p>${isNaN(NaN)}</p>`);
+    </script>
+  </body>
+</html>

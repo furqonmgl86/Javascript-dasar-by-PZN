@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Function Return Value</title>
+  </head>
+  <body>
+    <script>
+      //--------------------- Function Return Value------------------------//
+      // Mambuat function dengan parameter dan return value
+      function saySayang(namaSaya, namaPacar) {
+        const beb = `Sayang ${namaSaya} love ${namaPacar}`;
+        return beb;
+      }
+      //Memanggil function dan menangkap return value nya
+      const result = saySayang("Muhammad Furqon", "Fitri Fauziah");
+      document.writeln(`<h1>${result}</h1>`);
+
+      //Apabila valuenya lebih dari satu
+
+      function hasilUjianAkhir(value) {
+        if (value > 90) {
+          return "nilai anda A";
+        } else if (value > 80) {
+          return "nilai anda B";
+        } else if (value > 70) {
+          return "nilai anda C";
+        } else if (value > 60) {
+          return "nilai anda D";
+        } else {
+          return "Anda kurang pintar nilai anda E";
+        }
+      }
+
+      const nilaiUjian = hasilUjianAkhir(85);
+      document.writeln(`<p>${nilaiUjian}</p>`);
+
+      //Kalau pakai alert dan prompt
+      /*
+      let nilai = prompt("Masukan Nilai Ujian Anda");
+      const nilaiUjian = hasilUjianAkhir(nilai);
+      alert(`${nilaiUjian}`); */
+
+      // Menghentikan ekseskusi return
+
+      function isContains(array, searchValue) {
+        for (const element of array) {
+          if (element === searchValue) {
+            return true;
+          }
+        }
+        return false;
+      }
+
+      const array = [1, 2, 23, 37, 38, 43, 45, 45, 67, 98];
+      const search = 24;
+      const found = isContains(array, search);
+      document.writeln(`<h1>${found}</h1>`);
+    </script>
+  </body>
+</html>

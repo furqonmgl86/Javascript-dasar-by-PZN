@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Masalah variable var</title>
+  </head>
+  <body>
+    <script>
+      //--------------------- Masalah variable var ------------------------//
+
+      //1. Pakai let
+
+      // Global Scope
+      let i = 20;
+
+      for (let i = 0; i < 10; i++) {
+        //Local scope
+        console.info(`Local i ${i}`);
+      }
+
+      console.info(`Global i ${i}`);
+
+      //2. Pakai Var
+
+      // Global Scope
+      var j = 20;
+
+      for (var j = 0; j < 10; j++) {
+        //Local scope
+        console.info(`Local j ${j}`);
+      }
+
+      console.info(`Global j ${j}`);
+      // kalau var variable global scopenya akan ikut berubah
+    </script>
+  </body>
+</html>

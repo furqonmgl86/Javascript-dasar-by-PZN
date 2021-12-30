@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Destructuring</title>
+  </head>
+  <body>
+    <script>
+      //--------------------- Destructuring ------------------------//
+
+      // Kalau ambil dari Array secara manual
+      const names = ["Muhammad", "Furqon", "Fitri"];
+      const firstName = names[0];
+      const middleName = names[1];
+      const lastName = names[2];
+
+      console.info(firstName);
+      console.info(middleName);
+      console.info(lastName);
+
+      console.info("");
+
+      //Kalau destructuring
+      //Destructuring Array
+
+      const biodata = ["Fitri", "Fauziah", "Love", "Furqon", "Budi", "Joko"];
+      const [namaPertama, namaAkhir, sayang, pacar, ...lainLain] = biodata;
+
+      console.info(namaPertama);
+      console.info(namaAkhir);
+      console.info(sayang);
+      console.info(lainLain);
+
+      // Kalau ambil dari objek secara destructuring
+
+      const biodataSantri = {
+        ismi: "Latif",
+        qism: "Keamanan",
+        hujroh: {
+          maskan: "Santiniketan",
+          ayyuHujroh: "Sabiah",
+          roisHujroh: "Mehdar",
+        },
+        hobbi: "Ngevlog",
+        channel: "WPU Unpas",
+      };
+
+      const { ismi, qism, hujroh, ...others } = biodataSantri;
+      console.info(ismi);
+      console.info(qism);
+      console.info(hujroh);
+      console.info(others);
+    </script>
+  </body>
+</html>
